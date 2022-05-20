@@ -13,6 +13,7 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.json.*
 import kotlinx.serialization.json.Json.Default.decodeFromString
 
+@KtorDsl
 class GraphQL(val schema: Schema) {
 
     class Configuration: SchemaConfigurationDSL() {
@@ -42,7 +43,7 @@ class GraphQL(val schema: Schema) {
     }
 
 
-    companion object Feature: BaseApplicationPlugin<Application, Configuration, GraphQL> {
+    companion object Plugin: BaseApplicationPlugin<Application, Configuration, GraphQL> {
         override val key = AttributeKey<GraphQL>("KGraphQL")
 
         override fun install(pipeline: Application, configure: Configuration.() -> Unit): GraphQL {

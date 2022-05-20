@@ -6,7 +6,7 @@ import kotlinx.serialization.json.*
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
-class KtorFeatureTest : KtorTest() {
+class KtorPluginTest : KtorTest() {
 
     data class User(val id: Int = -1, val name: String = "") : Principal
 

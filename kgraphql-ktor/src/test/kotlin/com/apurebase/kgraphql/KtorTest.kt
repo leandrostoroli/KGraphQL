@@ -16,7 +16,7 @@ open class KtorTest {
                     basic {
                         realm = "ktor"
                         validate {
-                            KtorFeatureTest.User(4, it.name)
+                            KtorPluginTest.User(4, it.name)
                         }
                     }
                 }

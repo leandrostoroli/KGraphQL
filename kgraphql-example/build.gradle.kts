@@ -23,7 +23,7 @@ application {
 dependencies {
     implementation(project(":kgraphql-ktor"))
     implementation("io.ktor:ktor-server-netty:$ktor_version")
-    implementation("io.ktor:ktor-auth:$ktor_version")
+    implementation("io.ktor:ktor-server-auth:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")

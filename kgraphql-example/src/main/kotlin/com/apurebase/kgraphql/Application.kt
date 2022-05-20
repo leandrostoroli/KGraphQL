@@ -1,12 +1,8 @@
 package com.apurebase.kgraphql
 
 import com.apurebase.kgraphql.model.User
-import io.ktor.application.Application
-import io.ktor.application.install
-import io.ktor.auth.Authentication
-import io.ktor.auth.authenticate
-import io.ktor.auth.authentication
-import io.ktor.auth.basic
+import io.ktor.server.application.*
+import io.ktor.server.auth.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 

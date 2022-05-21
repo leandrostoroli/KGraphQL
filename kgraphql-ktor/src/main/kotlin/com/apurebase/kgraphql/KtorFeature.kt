@@ -112,3 +112,7 @@ class GraphQL(val schema: Schema) {
     }
 
 }
+
+@KtorDsl
+public fun Application.graphql(configuration: GraphQL.Configuration.() -> Unit): GraphQL =
+    pluginOrNull(GraphQL) ?: install(GraphQL, configuration)
